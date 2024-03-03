@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Reinforce",
+    "icon": "reinforce.webp",
+    "keys": ["UP", "DOWN", "RIGHT", "LEFT", "UP"]
+  },
+  {
+    "name": "SOS Beacon",
+    "icon": "SOSicon.webp",
+    "keys": ["UP", "DOWN", "RIGHT", "UP"]
+  },
+  {
+    "name": "Resupply",
+    "icon": "resupply.webp",
+    "keys": ["DOWN", "DOWN", "UP", "RIGHT"]
+  },
+  {
+    "name": "Hellbomb",
+    "icon": "hellbomb.webp",
+    "keys": ["DOWN", "UP", "LEFT", "DOWN", "UP", "RIGHT", "DOWN", "UP"]
+  },
+  {
+    "name": "SSSD Delivery",
+    "icon": "DeliverSSSD.webp",
+    "keys": ["DOWN", "DOWN", "DOWN", "UP", "UP"]
+  },
+  {
+    "name": "Seismic Probe",
+    "icon": "Seismicprobe.webp",
+    "keys": ["UP", "UP", "LEFT", "RIGHT", "DOWN", "DOWN"]
+  },
+  {
+    "name": "Upload Data",
+    "icon": "DeliverSSSD.webp",
+    "keys": ["DOWN", "DOWN", "UP", "UP", "UP"]
+  },
+  {
+    "name": "Eagle Rearm",
+    "icon": "HD2EagleRearm.webp",
+    "keys": ["UP", "UP", "LEFT", "UP", "RIGHT"]
+  }
+]
