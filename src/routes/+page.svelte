@@ -1,7 +1,9 @@
 <script>
   import { tweened } from "svelte/motion";
   import { writable } from "svelte/store";
+
   import Ad from "../lib/Ad.svelte";
+
   export let data;
 
   let active = 0;
@@ -193,7 +195,7 @@
       >
         <div class="text-9xl">GAME OVER!</div>
         <div class="text-3xl">Score: {Math.round($score)}</div>
-        <button on:click={gameStart}>Restart</button>
+        <a href="/" data-sveltekit-reload>Restart</a>
       </div>
     {:else}
       <div class="flex justify-center items-center gap-10 h-1/2">
