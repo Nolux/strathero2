@@ -6,7 +6,7 @@
   console.log(data);
   let active = 0;
 
-  const stratagems = writable(data.stratagems);
+  const stratagems = writable(data.rounds[0]);
 
   const score = tweened(0);
 
