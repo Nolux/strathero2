@@ -9,7 +9,25 @@ const shuffle = (array) => {
   return array;
 };
 
+const generateRounds = () => {
+  let maxTime = 30;
+  let rounds = [];
+  for (let i = 1; i < 55; ) {
+    rounds.push({
+      roundNumber: i,
+      stratagems: shuffle(stratagems).slice(0, 5 + i),
+      totalTime:
+        ((maxTime - i + Math.abs(maxTime - i)) / 2 +
+          Math.floor(Math.random() * 10) +
+          3) *
+        1000,
+    });
+    i++;
+  }
+  return rounds;
+};
+
 export async function load({ params }) {
   console.log(stratagems);
-  return { stratagems: shuffle(stratagems) };
+  return { stratagems: shuffle(stratagems), rounds: generateRounds() };
 }
