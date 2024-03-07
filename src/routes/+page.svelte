@@ -15,14 +15,22 @@
   let roundOver = false;
 
   let round = 0;
+  let roundScore = {
+    perfect: 0,
+    timeBonus: 0,
+    score: 0,
+  };
 
   let startTime = new Date();
   let endTime = new Date();
+  let timeBonus = new Date();
 
   let errorDone = false;
+  let perfectInput = true;
 
   const errorCooloff = (timeout) => {
     errorDone = true;
+    perfectInput = false;
 
     setTimeout(() => {
       errorDone = false;
@@ -68,6 +76,12 @@
 
     stratagems.set(data.rounds[roundNumber].stratagems);
     roundOver = false;
+    timeBonus = new Date();
+    roundScore = {
+      perfect: 0,
+      timeBonus: 0,
+      score: 0,
+    };
   };
 
   const timeProcentage = tweened(100);
@@ -116,27 +130,55 @@
     }
 
     if ($stratagems[0].keys.length <= active) {
-      console.log("done");
+      if (!gameOver) {
+        endTime.setMilliseconds(
+          endTime.getMilliseconds() +
+            Math.random() * ($stratagems[0].keys.length * 500)
+        );
+      }
+
+      let addedScore = 0;
+
+      if (perfectInput) {
+        const perfectInputBonus = 50;
+        addedScore = addedScore + perfectInputBonus;
+        roundScore.perfect = roundScore.perfect + perfectInputBonus;
+      }
+
+      const bonusEndTime = new Date();
+      console.log("points:", $stratagems[0].keys.length * 500);
+      const timeElapsed = bonusEndTime.getTime() - timeBonus.getTime();
+      console.log("time", timeElapsed);
+
+      const bonusPoints = $stratagems[0].keys.length * 500;
+
+      if (timeElapsed < bonusPoints) {
+        const addedTimeBonus = bonusPoints - timeElapsed;
+        addedScore = addedScore + addedTimeBonus;
+        roundScore.timeBonus = roundScore.timeBonus + addedTimeBonus;
+      }
+      console.log(addedScore);
+
       if ($stratagems[1]) {
+        addedScore = addedScore + $stratagems[0].keys.length * 10;
+        roundScore.score = roundScore.score + $stratagems[0].keys.length * 10;
+        active = 0;
+
         let shiftedList = $stratagems;
         shiftedList.shift();
         stratagems.set(shiftedList);
+      } else {
+        addedScore = addedScore + $stratagems[0].keys.length * 10;
+        roundScore.score = roundScore.score + $stratagems[0].keys.length * 10;
 
         active = 0;
-        score.set($score + 1);
-      } else {
-        active = 0;
-        score.set($score + 1);
+
         round++;
         roundOver = true;
         stratagems.set(data.rounds[round].stratagems);
       }
-
-      if (!gameOver) {
-        endTime.setMilliseconds(
-          endTime.getMilliseconds() + Math.random() * 2500
-        );
-      }
+      perfectInput = true;
+      score.set($score + addedScore);
     }
   };
 </script>
@@ -167,6 +209,11 @@
             >
               <div class="text-6xl text-white">ROUND OVER!</div>
               <div class="text-2xl text-white">Score: {Math.round($score)}</div>
+              <div class="flex flex-col">
+                <div>Perfect: {roundScore.perfect}</div>
+                <div>Time Bonus: {roundScore.timeBonus}</div>
+                <div>Score {roundScore.score}</div>
+              </div>
               <button
                 on:click={() => {
                   startRound(round);
@@ -222,10 +269,9 @@
     >
       <div class="text-9xl textyellow">STRAT HERO 2</div>
       <button class="text-3xl" on:click={gameStart}>Press to start!</button>
+      <Ad />
     </div>
   {/if}
-
-  <Ad />
 
   <div class="h-1 bg-white w-full"></div>
 </div>
