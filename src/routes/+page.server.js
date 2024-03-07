@@ -10,7 +10,7 @@ const shuffle = (array) => {
 };
 
 const generateRounds = () => {
-  let maxTime = 30;
+  let maxTime = 15;
   let rounds = [];
   for (let i = 1; i < 55; ) {
     rounds.push({
@@ -28,6 +28,5 @@ const generateRounds = () => {
 };
 
 export async function load({ params }) {
-  console.log(stratagems);
-  return { stratagems: shuffle(stratagems), rounds: generateRounds() };
+  return { rounds: generateRounds() };
 }

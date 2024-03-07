@@ -1,9 +1,9 @@
 <script>
   import { tweened } from "svelte/motion";
   import { writable } from "svelte/store";
+  import Ad from "../lib/Ad.svelte";
   export let data;
 
-  console.log(data);
   let active = 0;
 
   const stratagems = writable(data.rounds[0]);
@@ -38,8 +38,6 @@
     roundOver = false;
     errorDone = false;
 
-    console.log(startTime, endTime);
-
     active = 0;
     round = 0;
 
@@ -68,7 +66,6 @@
       startTime.getMilliseconds() + data.rounds[roundNumber].totalTime
     );
 
-    console.log(data.rounds[roundNumber]);
     stratagems.set(data.rounds[roundNumber].stratagems);
     roundOver = false;
   };
@@ -227,6 +224,8 @@
       <button class="text-3xl" on:click={gameStart}>Press to start!</button>
     </div>
   {/if}
+
+  <Ad />
 
   <div class="h-1 bg-white w-full"></div>
 </div>
