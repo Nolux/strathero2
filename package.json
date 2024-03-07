@@ -20,6 +20,7 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-vercel": "^5.1.0",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10"
   },
   "description": "A game to help learn stratagems in Helldivers 2",
