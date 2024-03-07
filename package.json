@@ -1,6 +1,6 @@
 {
   "name": "stratagemhero2",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite dev",
@@ -20,5 +20,17 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-vercel": "^5.1.0"
-  }
+  },
+  "description": "A game to help learn stratagems in Helldivers 2",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nolux/stratagemhero2.git"
+  },
+  "author": "Atle Selbek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nolux/stratagemhero2/issues"
+  },
+  "homepage": "https://github.com/Nolux/stratagemhero2#readme"
 }
