@@ -12,11 +12,12 @@
 
   let gameOver = false;
   let gameStarted = false;
+  let roundOver = false;
 
   let round = 0;
 
-  let totalTime = 10;
-  let timeRemaining = 10;
+  let startTime = new Date();
+  let endTime = new Date();
 
   let errorDone = false;
 
@@ -34,21 +35,42 @@
 
     gameOver = false;
     gameStarted = true;
+    roundOver = false;
     errorDone = false;
 
-    timeRemaining = 1000;
+    console.log(startTime, endTime);
+
     active = 0;
     round = 0;
 
-    setInterval(() => {
-      if (timeRemaining < 0) {
+    startRound(round);
+
+    let interval = setInterval(() => {
+      let now = new Date();
+      if (endTime.getTime() - now.getTime() < 0 && roundOver == false) {
         gameOver = true;
       }
+
       if (!gameOver) {
-        timeProcentage.set((timeRemaining / totalTime) * 100);
-        timeRemaining = timeRemaining - 1;
+        timeProcentage.set(
+          ((endTime.getTime() - now.getTime()) / data.rounds[round].totalTime) *
+            100
+        );
       }
-    }, 1000);
+    }, 500);
+  };
+
+  const startRound = (roundNumber) => {
+    startTime = new Date();
+    endTime = new Date();
+
+    endTime.setMilliseconds(
+      startTime.getMilliseconds() + data.rounds[roundNumber].totalTime
+    );
+
+    console.log(data.rounds[roundNumber]);
+    stratagems.set(data.rounds[roundNumber].stratagems);
+    roundOver = false;
   };
 
   const timeProcentage = tweened(100);
@@ -92,22 +114,29 @@
       }
     }
 
-    if (data.stratagems[0].keys.length <= active) {
+    if ($stratagems[0].keys.length <= active) {
       console.log("done");
-      data.stratagems.shift();
-      stratagems.set(data.stratagems);
+      if ($stratagems[1]) {
+        let test = $stratagems;
+        test.shift();
+        stratagems.set(test);
 
-      active = 0;
-      score.set($score + 1);
-
-      if (timeRemaining < totalTime) {
-        timeRemaining = timeRemaining + Math.random() * 5;
-        timeProcentage.set((timeRemaining / totalTime) * 100);
+        active = 0;
+        score.set($score + 1);
+      } else {
+        active = 0;
+        score.set($score + 1);
+        round++;
+        roundOver = true;
+        stratagems.set(data.rounds[round].stratagems);
       }
-      console.log(timeRemaining);
-    }
 
-    console.log(active);
+      if (!gameOver) {
+        endTime.setMilliseconds(
+          endTime.getMilliseconds() + Math.random() * 2500
+        );
+      }
+    }
   };
 </script>
 
@@ -131,40 +160,52 @@
           <div class="text-3xl textyellow">{round}</div>
         </div>
         <div class="h-full w-1/2 flex flex-col justify-center">
-          <div class="flex justify-between gap-2 items-center h-1/3">
-            {#each $stratagems as stratagem, i}
-              {#if i < 6}
-                <img
-                  src="stratagems/{stratagem.icon}"
-                  class={i == 0
-                    ? "border borderyellow h-full aspect-square"
-                    : " h-1/3 aspect-square"}
-                  alt=""
-                />
-              {/if}
-            {/each}
-          </div>
-          <div class="flex justify-around yellow text-center text-xl">
-            {$stratagems[0].name}
-          </div>
-          <div class="flex justify-center gap-4 h-20">
-            {#each $stratagems[0].keys as keys, i}
-              <div
-                class="h-16 w-16 transition-all bg-white deactive {i == active
-                  ? 'active'
-                  : ''} {errorDone ? 'bg-red-500' : ''} {i < active
-                  ? 'done'
-                  : ''}"
-                style="mask-image: url(arrows/{keys}.svg); mask-repeat: no-repeat; mask-size: cover; "
-              ></div>
-            {/each}
-          </div>
-          <div class="bg-gray-500 h-6">
+          {#if roundOver}
             <div
-              class="h-full yellow"
-              style="width:{$timeProcentage > 100 ? 100 : $timeProcentage}%"
-            ></div>
-          </div>
+              class="flex flex-col justify-center items-center gap-10 h-1/2 text-white"
+            >
+              <div class="text-6xl text-white">ROUND OVER!</div>
+              <div class="text-2xl text-white">Score: {Math.round($score)}</div>
+              <button
+                on:click={() => {
+                  startRound(round);
+                }}>Start next round</button
+              >
+            </div>
+          {:else}
+            <div class="flex justify-between gap-2 items-center h-1/3">
+              {#each $stratagems as stratagem, i}
+                {#if i < 6}
+                  <img
+                    src="stratagems/{stratagem.icon}"
+                    class={i == 0
+                      ? "border borderyellow h-full aspect-square"
+                      : " h-1/3 aspect-square"}
+                    alt=""
+                  />
+                {/if}
+              {/each}
+            </div>
+            <div class="flex justify-around yellow text-center text-xl">
+              {$stratagems[0].name}
+            </div>
+            <div class="flex justify-center gap-4 h-20">
+              {#each $stratagems[0].keys as keys, i}
+                <div
+                  class="h-16 w-16 transition-all bg-white deactive {i == active
+                    ? 'active'
+                    : ''} {errorDone ? 'red' : ''} {i < active ? 'done' : ''}"
+                  style="mask-image: url(arrows/{keys}.svg); mask-repeat: no-repeat; mask-size: cover; "
+                ></div>
+              {/each}
+            </div>
+            <div class="bg-gray-500 h-6">
+              <div
+                class="h-full yellow"
+                style="width:{$timeProcentage > 100 ? 100 : $timeProcentage}%"
+              ></div>
+            </div>
+          {/if}
         </div>
         <div class="text-white text-right self-start">
           <div class="text-3xl textyellow bold font-bold">
@@ -200,6 +241,9 @@
   }
   .monda {
     font-family: "Monda Bold";
+  }
+  .red {
+    background-color: #ff0000;
   }
   .yellow {
     background-color: #eaeea2;
