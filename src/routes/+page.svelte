@@ -81,7 +81,11 @@
     if (errorDone) {
       return;
     }
-    if (e.keyCode == 38) {
+    if (roundOver) {
+      startRound(round);
+      return;
+    }
+    if (e.keyCode == 38 || e.keyCode == 87) {
       // UP
       if ($stratagems[0].keys[active] == "UP") {
         active = active + 1;
@@ -89,7 +93,7 @@
         errorCooloff(cooloffTime);
       }
     }
-    if (e.keyCode == 40) {
+    if (e.keyCode == 40 || e.keyCode == 83) {
       // DOWN
       if ($stratagems[0].keys[active] == "DOWN") {
         active = active + 1;
@@ -97,7 +101,7 @@
         errorCooloff(cooloffTime);
       }
     }
-    if (e.keyCode == 37) {
+    if (e.keyCode == 37 || e.keyCode == 65) {
       // LEFT
       if ($stratagems[0].keys[active] == "LEFT") {
         active = active + 1;
@@ -105,7 +109,7 @@
         errorCooloff(cooloffTime);
       }
     }
-    if (e.keyCode == 39) {
+    if (e.keyCode == 39 || e.keyCode == 68) {
       // RIGHT
       if ($stratagems[0].keys[active] == "RIGHT") {
         active = active + 1;
@@ -117,9 +121,9 @@
     if ($stratagems[0].keys.length <= active) {
       console.log("done");
       if ($stratagems[1]) {
-        let test = $stratagems;
-        test.shift();
-        stratagems.set(test);
+        let shiftedList = $stratagems;
+        shiftedList.shift();
+        stratagems.set(shiftedList);
 
         active = 0;
         score.set($score + 1);
@@ -169,7 +173,7 @@
               <button
                 on:click={() => {
                   startRound(round);
-                }}>Start next round</button
+                }}>Click here to start new round or press a key!</button
               >
             </div>
           {:else}
