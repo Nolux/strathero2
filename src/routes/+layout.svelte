@@ -4,6 +4,7 @@
   import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 
   injectSpeedInsights();
+  inject();
 </script>
 
 <slot />
