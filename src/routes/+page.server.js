@@ -28,5 +28,5 @@ const generateRounds = () => {
 };
 
 export async function load({ params }) {
-  return { rounds: generateRounds() };
+  return { stratagems, rounds: generateRounds() };
 }

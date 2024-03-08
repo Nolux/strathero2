@@ -59,7 +59,7 @@
         gameOver = true;
       }
 
-      if (!gameOver) {
+      if (!gameOver && !roundOver) {
         timeProcentage.set(
           ((endTime.getTime() - now.getTime()) / data.rounds[round].totalTime) *
             100
@@ -177,6 +177,7 @@
 
         round++;
         roundOver = true;
+        timeProcentage.set(100, { duration: 0 });
         stratagems.set(data.rounds[round].stratagems);
       }
       perfectInput = true;
@@ -185,6 +186,16 @@
     }
   };
 </script>
+
+<svelte:head>
+  {#each data.stratagems as stratagem}
+    <link rel="preload" as="image" href="stratagems/{stratagem.icon}" />
+  {/each}
+  <link rel="preload" as="image" href="arrows/UP.svg" />
+  <link rel="preload" as="image" href="arrows/DOWN.svg" />
+  <link rel="preload" as="image" href="arrows/LEFT.svg" />
+  <link rel="preload" as="image" href="arrows/RIGHT.svg" />
+</svelte:head>
 
 <div class="h-screen bg-black monda flex flex-col justify-center gap-10">
   <div class="h-1 bg-white w-full"></div>
