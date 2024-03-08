@@ -33,6 +33,7 @@
   const errorCooloff = (timeout) => {
     errorDone = true;
     perfectInput = false;
+    active = 0;
 
     setTimeout(() => {
       errorDone = false;
@@ -214,7 +215,7 @@
         <div class="text-white self-start">
           <div>ROUND</div>
 
-          <div class="text-3xl textyellow">{round}</div>
+          <div class="text-3xl textyellow">{round + 1}</div>
         </div>
         <div class="h-full w-1/2 flex flex-col justify-center">
           {#if roundOver}
