@@ -251,11 +251,13 @@
             <div class="flex justify-around yellow text-center text-xl">
               {$stratagems[0].name}
             </div>
-            <div class="flex justify-center gap-4 h-20">
+            <div class="flex justify-center gap-4 h-20 mt-4">
               {#each $stratagems[0].keys as keys, i}
                 <div
                   class="h-16 w-16 transition-all bg-white deactive {i == active
-                    ? 'active'
+                    ? 'active scale-125'
+                    : ''} {errorDone && i == active
+                    ? 'red scale-100'
                     : ''} {errorDone ? 'red' : ''} {i < active ? 'done' : ''}"
                   style="mask-image: url(arrows/{keys}.svg); mask-repeat: no-repeat; mask-size: cover; "
                 ></div>
