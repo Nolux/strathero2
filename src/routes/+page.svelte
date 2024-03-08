@@ -286,8 +286,16 @@
       <Ad />
     </div>
   {/if}
-
-  <div class="h-1 bg-white w-full"></div>
+  <div>
+    <div class="h-1 bg-white w-full"></div>
+    <div class="mt-2 flex w-full justify-center text-white text-xs">
+      Atle Selbek © 2024 -<a
+        href="https://github.com/Nolux/stratagemhero2/issues"
+      >
+        - Found a bug?</a
+      >
+    </div>
+  </div>
 </div>
 
 <svelte:window on:keydown|preventDefault={onKeyDown} />
