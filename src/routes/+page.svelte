@@ -263,7 +263,9 @@
                     ? 'active scale-125'
                     : ''} {errorDone && i == active
                     ? 'red scale-100'
-                    : ''} {errorDone ? 'red' : ''} {i < active ? 'done' : ''}"
+                    : ''} {errorDone ? 'red scale-125' : ''} {i < active
+                    ? 'done'
+                    : ''}"
                   style="mask-image: url(arrows/{keys}.svg); mask-repeat: no-repeat; mask-size: cover; "
                 ></div>
               {/each}
