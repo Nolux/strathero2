@@ -155,7 +155,7 @@
       const bonusPoints = $stratagems[0].keys.length * 500;
 
       if (timeElapsed < bonusPoints) {
-        const addedTimeBonus = bonusPoints - timeElapsed;
+        const addedTimeBonus = Math.floor((bonusPoints - timeElapsed) / 10);
         addedScore = addedScore + addedTimeBonus;
         roundScore.timeBonus = roundScore.timeBonus + addedTimeBonus;
       }
@@ -180,6 +180,7 @@
         stratagems.set(data.rounds[round].stratagems);
       }
       perfectInput = true;
+      timeBonus = new Date();
       score.set($score + addedScore);
     }
   };
@@ -214,7 +215,7 @@
               <div class="flex flex-col">
                 <div>Perfect: {roundScore.perfect}</div>
                 <div>Time Bonus: {roundScore.timeBonus}</div>
-                <div>Score {roundScore.score}</div>
+                <div>Score: {roundScore.score}</div>
               </div>
               <button
                 on:click={() => {
