@@ -66,7 +66,7 @@
             100
         );
       }
-    }, 500);
+    }, 250);
   };
 
   const startRound = (roundNumber) => {
@@ -92,6 +92,10 @@
   const onKeyDown = (e) => {
     const cooloffTime = 1000;
     console.log(e);
+    if (gameStarted == false) {
+      gameStart();
+      return;
+    }
     if (errorDone) {
       return;
     }
@@ -285,7 +289,9 @@
       class="flex flex-col justify-center items-center gap-10 h-1/2 text-white"
     >
       <div class="text-9xl textyellow">STRAT HERO 2</div>
-      <button class="text-3xl" on:click={gameStart}>Press to start!</button>
+      <button class="text-3xl" on:click={gameStart}
+        >Click here or press a key to start!</button
+      >
       <Ad />
     </div>
   {/if}
