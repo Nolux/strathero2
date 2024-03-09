@@ -7,11 +7,16 @@
   inject();
 </script>
 
-<slot />
+<div class="h-screen bg-black monda flex flex-col justify-center gap-10">
+  <slot />
+</div>
 
 <style>
   @font-face {
     font-family: "Monda Bold";
     src: url("$lib/fonts/Monda-Bold.ttf");
+  }
+  .monda {
+    font-family: "Monda Bold";
   }
 </style>
