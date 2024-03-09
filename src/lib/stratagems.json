@@ -273,5 +273,10 @@
     "name": "Eagle 500kg Bomb",
     "icon": "Eagle500.webp",
     "keys": ["UP", "RIGHT", "DOWN", "DOWN", "DOWN"]
+  },
+  {
+    "name": "EXO-45 Patriot Exosuit",
+    "icon": "EXO-45_Patriot_Exosuit.webp",
+    "keys": ["LEFT", "DOWN", "RIGHT", "UP", "LEFT", "DOWN", "DOWN"]
   }
 ]
