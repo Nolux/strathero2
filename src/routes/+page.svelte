@@ -91,7 +91,6 @@
 
   const onKeyDown = (e) => {
     const cooloffTime = 1000;
-    console.log(e);
     if (gameStarted == false) {
       gameStart();
       return;
@@ -153,9 +152,7 @@
       }
 
       const bonusEndTime = new Date();
-      console.log("points:", $stratagems[0].keys.length * 500);
       const timeElapsed = bonusEndTime.getTime() - timeBonus.getTime();
-      console.log("time", timeElapsed);
 
       const bonusPoints = $stratagems[0].keys.length * 500;
 
@@ -164,7 +161,6 @@
         addedScore = addedScore + addedTimeBonus;
         roundScore.timeBonus = roundScore.timeBonus + addedTimeBonus;
       }
-      console.log(addedScore);
 
       if ($stratagems[1]) {
         addedScore = addedScore + $stratagems[0].keys.length * 10;
