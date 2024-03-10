@@ -21,6 +21,7 @@
     font-family: "Monda Bold";
   }
   .crt {
+    pointer-events: none;
     opacity: 0.5;
     background: radial-gradient(
       rgba(0, 0, 0, 0),
