@@ -12,10 +12,12 @@ const shuffle = (array) => {
 const generateRounds = () => {
   let maxTime = 15;
   let rounds = [];
-  for (let i = 1; i < 55; ) {
+  for (let i = 1; i < 99; ) {
     rounds.push({
       roundNumber: i,
-      stratagems: shuffle(stratagems).slice(0, 5 + i),
+      stratagems: [shuffle(stratagems), shuffle(stratagems)]
+        .flat()
+        .slice(0, 5 + i),
       totalTime:
         ((maxTime - i + Math.abs(maxTime - i)) / 2 +
           Math.floor(Math.random() * 10) +
