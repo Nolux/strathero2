@@ -24,6 +24,7 @@
   let gameOver = false;
   let gameStarted = false;
   let roundOver = false;
+  let restartEnabled = false;
 
   let round = 0;
   let roundScore = {
@@ -68,13 +69,14 @@
     gameStarted = true;
     roundOver = false;
     errorDone = false;
+    restartEnabled = false;
 
     active = 0;
     round = 0;
 
     startRound(round);
 
-    let interval = setInterval(() => {
+    let interval = setInterval(async () => {
       let now = new Date();
       if (
         endTime.getTime() - now.getTime() < 0 &&
@@ -82,6 +84,9 @@
         gameOver == false
       ) {
         gameOver = true;
+        await getNewRounds();
+        restartEnabled = true;
+
         if (!$audioMuted) {
           audioFiles.loose.play();
         }
@@ -113,6 +118,16 @@
       score: 0,
     };
   };
+  const getNewRounds = async () => {
+    const res = await fetch("api/getRounds");
+    const newData = await res.json();
+    data.rounds = newData.rounds;
+    stratagems.set(data.rounds[0].stratagems);
+  };
+
+  const restartGame = async () => {
+    gameStart();
+  };
 
   const timeProcentage = tweened(100);
 
@@ -120,6 +135,11 @@
     const cooloffTime = 1000;
 
     if (gameStarted == false) {
+      gameStart();
+      return;
+    }
+
+    if (restartEnabled == true) {
       gameStart();
       return;
     }
@@ -239,7 +259,7 @@
 <Border />
 {#if gameStarted}
   {#if gameOver}
-    <GameOverScreen {score} />
+    <GameOverScreen {score} {restartGame} />
   {:else}
     <div class="flex justify-center items-center gap-10 h-1/2">
       <RoundIndicator {round} />
