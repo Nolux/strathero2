@@ -6,6 +6,7 @@
 
 <div class="flex flex-col justify-center items-center gap-10 h-1/2 text-white">
   <div class="text-9xl textyellow">STRAT HERO 2</div>
+  <div class="text-xs">USE ARROWS or WASD to input stratagems</div>
   <button class="text-3xl" on:click={gameStart}
     >Click here or press a key to start!</button
   >
