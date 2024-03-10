@@ -7,7 +7,8 @@
   inject();
 </script>
 
-<div class="h-screen bg-black monda flex flex-col justify-center gap-10">
+<div class="absolute h-screen w-screen crt bg-clip-border"></div>
+<div class=" h-screen bg-black monda flex flex-col justify-center gap-10">
   <slot />
 </div>
 
@@ -18,5 +19,33 @@
   }
   .monda {
     font-family: "Monda Bold";
+  }
+  .crt {
+    opacity: 0.5;
+    background: radial-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      #333333,
+      #333333
+    );
+  }
+
+  .crt:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
   }
 </style>
