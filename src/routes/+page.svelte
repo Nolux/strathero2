@@ -332,6 +332,7 @@
 
 <AudioIndicator {audioFiles} />
 <TouchIndicator />
+
 <svelte:window
   bind:innerWidth
   bind:innerHeight

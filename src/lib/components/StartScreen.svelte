@@ -12,7 +12,6 @@
   <button class="text-xl" on:click={gameStart}
     >Click here or press a key to start!</button
   >
-  <Ad />
 </div>
 
 <style>

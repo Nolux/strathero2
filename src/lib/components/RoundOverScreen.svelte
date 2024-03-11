@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col justify-center items-center gap-10 text-white">
-  <div class="text-6xl textyellow text-center">ROUND OVER!</div>
+  <div class="text-6xl textyellow text-center z-20">ROUND OVER!</div>
 
   <table class="w-full">
     <tr

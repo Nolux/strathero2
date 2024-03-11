@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="w-4 h-4 transition-all absolute top-4 right-10"
+  class="w-4 h-4 absolute top-4 right-10 z-50"
   on:click={() => {
     touchEnabled.set(!$touchEnabled);
   }}

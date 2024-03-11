@@ -9,8 +9,10 @@
   inject();
 </script>
 
-<div class="absolute h-screen w-screen crt bg-clip-border z-10"></div>
-<div class=" h-screen bg-black monda flex flex-col justify-center gap-10">
+<div
+  class="absolute h-dvh w-dvw crt bg-clip-border z-10 hidden md:block opacity-50"
+></div>
+<div class="h-dvh w-dvw bg-black monda flex flex-col justify-center gap-4">
   <slot />
   <Byline />
 </div>
@@ -25,7 +27,7 @@
   }
   .crt {
     pointer-events: none;
-    opacity: 0.5;
+
     background: radial-gradient(
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),

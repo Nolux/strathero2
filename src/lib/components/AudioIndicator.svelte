@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="w-4 h-4 transition-all absolute top-4 right-4"
+  class="w-4 h-4 absolute top-4 right-4 z-50"
   on:click={() => {
     audioMuted.set(!$audioMuted);
   }}
