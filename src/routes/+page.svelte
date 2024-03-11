@@ -259,7 +259,7 @@
 <Border />
 {#if gameStarted}
   {#if gameOver}
-    <GameOverScreen {score} {restartGame} />
+    <GameOverScreen {score} {round} {restartGame} />
   {:else}
     <div class="flex justify-center items-center gap-10 h-1/2">
       <RoundIndicator {round} />
