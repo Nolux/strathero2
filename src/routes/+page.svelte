@@ -271,7 +271,7 @@
     <GameOverScreen {score} {round} {restartGame} />
   {:else}
     <div
-      class="flex justify-center items-center gap-10 md:w-1/2 md:m-auto h-1/2 md:relative"
+      class="flex justify-center items-center gap-10 md:w-1/2 md:mx-auto h-1/2 md:relative"
     >
       <RoundIndicator {round} />
       <div class="h-full w-full flex flex-col justify-center m-4">
