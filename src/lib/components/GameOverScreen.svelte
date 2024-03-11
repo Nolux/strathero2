@@ -13,7 +13,7 @@
     </tr>
     <tr class="text-3xl"
       ><td><span class="textyellow">Round </span>: </td>
-      <td class="text-right">{round}</td></tr
+      <td class="text-right">{round + 1}</td></tr
     >
   </table>
   <button on:click={restartGame}
