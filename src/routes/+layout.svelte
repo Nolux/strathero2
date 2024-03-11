@@ -3,13 +3,16 @@
   import { inject } from "@vercel/analytics";
   import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 
+  import Byline from "$lib/components/Byline.svelte";
+
   injectSpeedInsights();
   inject();
 </script>
 
-<div class="absolute h-screen w-screen crt bg-clip-border"></div>
+<div class="absolute h-screen w-screen crt bg-clip-border z-10"></div>
 <div class=" h-screen bg-black monda flex flex-col justify-center gap-10">
   <slot />
+  <Byline />
 </div>
 
 <style>

@@ -3,17 +3,22 @@
   import { writable } from "svelte/store";
 
   import { audioMuted } from "$lib/stores/AudioStore.js";
+  import { touchEnabled } from "$lib/stores/TouchStore.js";
 
   import AudioIndicator from "../lib/components/AudioIndicator.svelte";
-  import Byline from "../lib/components/Byline.svelte";
   import Border from "../lib/components/Border.svelte";
   import GameOverScreen from "../lib/components/GameOverScreen.svelte";
   import RoundOverScreen from "../lib/components/RoundOverScreen.svelte";
   import StartScreen from "../lib/components/StartScreen.svelte";
   import ScoreIndicator from "../lib/components/ScoreIndicator.svelte";
   import RoundIndicator from "../lib/components/RoundIndicator.svelte";
+  import ArrowInput from "../lib/components/ArrowInput.svelte";
+  import TouchIndicator from "../lib/components/TouchIndicator.svelte";
 
   export let data;
+
+  let innerHeight;
+  let innerWidth;
 
   let active = 0;
 
@@ -132,6 +137,7 @@
   const timeProcentage = tweened(100);
 
   const onKeyDown = (e) => {
+    console.log(e);
     const cooloffTime = 1000;
 
     if (gameStarted == false) {
@@ -256,18 +262,23 @@
   <link rel="preload" as="image" href="arrows/RIGHT.svg" />
 </svelte:head>
 
-<Border />
+{#if innerWidth < 800 || $touchEnabled}{:else}
+  <Border />
+{/if}
+
 {#if gameStarted}
   {#if gameOver}
     <GameOverScreen {score} {round} {restartGame} />
   {:else}
-    <div class="flex justify-center items-center gap-10 h-1/2">
+    <div
+      class="flex justify-center items-center gap-10 md:w-1/2 md:m-auto h-1/2 md:relative"
+    >
       <RoundIndicator {round} />
-      <div class="h-full w-1/2 flex flex-col justify-center">
+      <div class="h-full w-full flex flex-col justify-center m-4">
         {#if roundOver}
           <RoundOverScreen {roundScore} {score} {startRound} />
         {:else}
-          <div class="flex justify-between gap-2 items-center h-1/3">
+          <div class="flex justify-between md:gap-2 items-center h-1/3">
             {#each $stratagems as stratagem, i}
               {#if i < 6}
                 <img
@@ -283,10 +294,11 @@
           <div class="flex justify-around yellow text-center text-xl">
             {$stratagems[0].name}
           </div>
-          <div class="flex justify-center gap-4 h-20 mt-4">
+          <div class="flex justify-center gap-4 h-20 my-4">
             {#each $stratagems[0].keys as keys, i}
               <div
-                class="h-16 w-16 transition-all bg-white deactive {i == active
+                class="h-6 w-6 md:h-16 md:w-16 transition-all bg-white deactive {i ==
+                active
                   ? 'active scale-125'
                   : ''} {errorDone && i == active
                   ? 'red scale-100'
@@ -311,14 +323,20 @@
 {:else}
   <StartScreen {gameStart} />
 {/if}
-<div>
+
+{#if innerWidth < 800 || $touchEnabled}
+  <ArrowInput {onKeyDown} />
+{:else}
   <Border />
-  <Byline />
-</div>
+{/if}
 
 <AudioIndicator {audioFiles} />
-
-<svelte:window on:keydown|preventDefault={onKeyDown} />
+<TouchIndicator />
+<svelte:window
+  bind:innerWidth
+  bind:innerHeight
+  on:keydown|preventDefault={onKeyDown}
+/>
 
 <style>
   .active {

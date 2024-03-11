@@ -2,7 +2,7 @@
   export let score;
 </script>
 
-<div class="text-white text-right self-start">
+<div class="absolute top-10 md:top-0 right-4 text-white text-right self-start">
   <div class="text-3xl textyellow bold font-bold">
     {Math.round($score)}
   </div>

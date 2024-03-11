@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col justify-center items-center gap-10 h-1/2 text-white">
-  <div class="text-9xl textyellow text-center">GAME OVER!</div>
+  <div class="text-6xl textyellow text-center">GAME OVER!</div>
   <table class="w-1/2">
     <tr class="text-3xl">
       <td><span class="textyellow">Score </span>:</td>
