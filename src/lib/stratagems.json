@@ -47,7 +47,7 @@
   {
     "name": "EAT-17 Expendable Anti-tank",
     "icon": "EAT-17.webp",
-    "keys": ["DOWN", "UP", "LEFT", "UP", "RIGHT", "DOWN"]
+    "keys": ["DOWN", "DOWN", "LEFT", "UP", "RIGHT"]
   },
   {
     "name": "GR-8 Recoilless Rifle",
