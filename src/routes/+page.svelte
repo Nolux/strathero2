@@ -37,6 +37,7 @@
     timeBonus: 0,
     score: 0,
   };
+  let totalStratsDone = 0;
 
   let startTime = new Date();
   let endTime = new Date();
@@ -78,6 +79,7 @@
 
     active = 0;
     round = 0;
+    totalStratsDone = 0;
 
     startRound(round);
 
@@ -221,7 +223,9 @@
       if ($stratagems[1]) {
         addedScore = addedScore + $stratagems[0].keys.length * 10;
         roundScore.score = roundScore.score + $stratagems[0].keys.length * 10;
+
         active = 0;
+        totalStratsDone++;
 
         if (!$audioMuted) {
           audioFiles.win.play();
@@ -235,6 +239,7 @@
         roundScore.score = roundScore.score + $stratagems[0].keys.length * 10;
 
         active = 0;
+        totalStratsDone++;
 
         if (!$audioMuted) {
           audioFiles.success.play();
@@ -268,10 +273,10 @@
 
 {#if gameStarted}
   {#if gameOver}
-    <GameOverScreen {score} {round} {restartGame} />
+    <GameOverScreen {score} {totalStratsDone} {round} {restartGame} />
   {:else}
     <div
-      class="flex justify-center items-center gap-10 md:w-1/2 md:mx-auto h-1/2 md:relative"
+      class="flex justify-center items-center gap-10 md:w-1/2 md:mx-auto h-1/2 md:relative z-20"
     >
       <RoundIndicator {round} />
       <div class="h-full w-full flex flex-col justify-center m-4">
@@ -291,7 +296,7 @@
               {/if}
             {/each}
           </div>
-          <div class="flex justify-around yellow text-center text-xl">
+          <div class="flex justify-around yellow text-center text-xl mt-2">
             {$stratagems[0].name}
           </div>
           <div class="flex justify-center gap-4 h-20 my-4">
