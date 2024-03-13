@@ -281,9 +281,9 @@
       <RoundIndicator {round} />
       <div class="h-full w-full flex flex-col justify-center m-4">
         {#if roundOver}
-          <RoundOverScreen {roundScore} {score} {startRound} />
+          <RoundOverScreen {roundScore} {score} {round} {startRound} />
         {:else}
-          <div class="flex justify-between md:gap-2 items-center h-1/3">
+          <div class="flex justify-start md:gap-2 items-center h-1/3">
             {#each $stratagems as stratagem, i}
               {#if i < 6}
                 <img

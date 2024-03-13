@@ -3,6 +3,7 @@
 
   export let score;
   export let roundScore;
+  export let round;
   export let startRound;
 </script>
 
