@@ -283,17 +283,17 @@
         {#if roundOver}
           <RoundOverScreen {roundScore} {score} {round} {startRound} />
         {:else}
-          <div class="flex justify-start md:gap-2 items-center h-1/3">
+          <div
+            class="flex justify-start md:gap-2 items-center h-1/3 overflow-hidden"
+          >
             {#each $stratagems as stratagem, i}
-              {#if i < 6}
-                <img
-                  src="stratagems/{stratagem.icon}"
-                  class={i == 0
-                    ? "border borderyellow h-full aspect-square"
-                    : " h-1/3 aspect-square"}
-                  alt=""
-                />
-              {/if}
+              <img
+                src="stratagems/{stratagem.icon}"
+                class={i == 0
+                  ? "border borderyellow h-full aspect-square"
+                  : " h-1/3 aspect-square"}
+                alt=""
+              />
             {/each}
           </div>
           <div class="flex justify-around yellow text-center text-xl mt-2">
