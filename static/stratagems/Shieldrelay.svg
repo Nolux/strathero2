@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#689552;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#689552;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<rect width="512" height="512"/>
+<path class="st0" d="M33.7,259.7v-184c0-22.1,17.9-40,40-40H256"/>
+<path class="st0" d="M479.2,258.9v184c0,22.1-17.9,40-40,40H256.9"/>
+<g>
+	<path id="Rectangle_3_copy_2" class="st1" d="M439,410.6H73v-63.2l53.6-21.9l63.1,31.6l66.3-31.6l66.3,31.6l63.1-31.6l53.6,22.7
+		V410.6z"/>
+	<path class="st2" d="M174,265.5c0,0,75.7,50.5,82,50.5c6.3,0,82-50.5,82-50.5V120.3c0,0-69.6-18.9-82-18.9c-12.4,0-82,18.9-82,18.9
+		V265.5z M221.3,208.7l47.3-66.3l-15.8,53.6h37.9l-47.3,63.1l15.8-50.5H221.3z"/>
+</g>
+</svg>

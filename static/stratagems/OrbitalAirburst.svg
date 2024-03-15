@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#DD7B6C;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#DD7B6C;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<rect width="512" height="512"/>
+<path class="st0" d="M33.7,259.7v-184c0-22.1,17.9-40,40-40H256"/>
+<path class="st0" d="M479.2,258.9v184c0,22.1-17.9,40-40,40H256.9"/>
+<g id="HD2-OAS-2">
+	<path class="st1" d="M376.6,437.3c-1.1-37-6.7-66.8-15-90.7H413c16,27.5,24.4,58.8,24.3,90.7H376.6z M333.8,294.3l-10.1-25
+		c33.8,13.6,62.7,37.1,83,67.3h-48.8C352,321.4,343.9,307.2,333.8,294.3z M347.8,336.6h-71.6v-73c1.1,0.4,2.1,0.9,3.1,1.3l20.8,51.6
+		l29.2-12.4C336.7,314.2,342.9,325.1,347.8,336.6z M186,304.1l29.2,12.4l20.8-51.6c1-0.4,2.1-0.9,3.1-1.3v73h-71.6
+		C172.5,325.1,178.6,314.2,186,304.1z M157.4,336.6h-52.2c21.1-31.5,51.5-55.6,87-68.9l-10.7,26.4
+		C171.5,307,163.4,321.3,157.4,336.6z M138.7,437.3H74.7c0-31.8,8.4-63.1,24.3-90.7h54.7C145.4,370.6,139.8,400.3,138.7,437.3z
+		 M351.7,346.7c10,29.2,15.2,59.8,15.4,90.7H262.7v-90.7H351.7z M163.7,346.7h89v90.7H148.3C148.5,406.5,153.7,375.9,163.7,346.7z"
+		/>
+	<path class="st1" d="M299.7,316.4"/>
+	<g>
+		<rect x="252.6" y="198.9" class="st2" width="10.1" height="13.4"/>
+		<rect id="Rectangle_5_copy" x="252.6" y="229.1" class="st2" width="10.1" height="13.4"/>
+		<rect id="Rectangle_5_copy_2" x="252.6" y="259.4" class="st2" width="10.1" height="13.4"/>
+		<rect id="Rectangle_5_copy_3" x="252.6" y="289.6" class="st2" width="10.1" height="13.4"/>
+		<rect id="Rectangle_5_copy_4" x="252.6" y="319.8" class="st2" width="10.1" height="13.4"/>
+		<path id="Rectangle_5_copy_5" class="st3" d="M232.2,195l9.6,3.1l-4.1,12.8l-9.6-3.1L232.2,195z"/>
+		<path id="Rectangle_5_copy_6" class="st3" d="M223,223.8l9.6,3.1l-4.1,12.8l-9.6-3.1L223,223.8z"/>
+		<path id="Rectangle_5_copy_7" class="st3" d="M213.8,252.6l9.6,3.1l-4.1,12.8l-9.6-3.1L213.8,252.6z"/>
+		<path id="Rectangle_5_copy_8" class="st3" d="M203.8,279.4l9.6,3.1l-4.1,12.8l-9.6-3.1L203.8,279.4z"/>
+		<path id="Rectangle_5_copy_9" class="st3" d="M274.2,197.4l9.5-3.3l4.4,12.7l-9.5,3.3L274.2,197.4z"/>
+		<path id="Rectangle_5_copy_10" class="st3" d="M284.1,226l9.5-3.3l4.4,12.7l-9.5,3.3L284.1,226z"/>
+		<path id="Rectangle_5_copy_11" class="st3" d="M293.9,254.5l9.5-3.3l4.4,12.7l-9.5,3.3L293.9,254.5z"/>
+		<path id="Rectangle_5_copy_12" class="st3" d="M301.9,282.1l9.5-3.3l4.4,12.7l-9.5,3.3L301.9,282.1z"/>
+		<path class="st3" d="M282.1,143.9l17.6,14.7l-21.1-0.8l4.3,21l-16.8-13.4l-8.4,20.1l-8.4-20.1l-16.8,13.4l4.3-21l-21.1,0.8
+			l17.6-14.7l-17.6-12.2h20.1l-3.4-20.1l20.1,13.4V74.7h10.1V125l20.1-13.4l-3.4,20.1h20.1L282.1,143.9z"/>
+		<path class="st3" d="M366.8,131.8"/>
+		<path class="st3" d="M333.2,111.6"/>
+	</g>
+</g>
+</svg>

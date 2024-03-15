@@ -1,282 +1,297 @@
 [
   {
     "name": "LIFT-850 Jump Pack",
-    "icon": "LIFT-850.webp",
+    "icon": "LIFT-850.png",
     "keys": ["DOWN", "UP", "UP", "DOWN", "UP"]
   },
   {
     "name": "B-1 Supply Pack",
-    "icon": "B-1.webp",
+    "icon": "B-1.png",
     "keys": ["DOWN", "LEFT", "DOWN", "UP", "UP", "DOWN"]
   },
   {
     "name": "AX/LAS-5 \"Guard Dog\" Rover",
-    "icon": "AX-LAS-5.webp",
+    "icon": "AX-LAS-5.png",
     "keys": ["DOWN", "UP", "LEFT", "UP", "RIGHT", "RIGHT"]
   },
   {
     "name": "SH-20 Ballistic Shield Backpack",
-    "icon": "SH-20.webp",
+    "icon": "SH-20.png",
     "keys": ["DOWN", "LEFT", "DOWN", "DOWN", "UP", "LEFT"]
   },
   {
     "name": "SH-32 Shield Generator Pack",
-    "icon": "SH-32.webp",
+    "icon": "SH-32.png",
     "keys": ["DOWN", "UP", "LEFT", "RIGHT", "LEFT", "RIGHT"]
   },
   {
     "name": "AX/AR-23 \"Guard Dog\"",
-    "icon": "AX-AR-23.webp",
+    "icon": "AX-AR-23.png",
     "keys": ["DOWN", "UP", "LEFT", "UP", "RIGHT", "DOWN"]
   },
   {
     "name": "MG-43 Machine Gun",
-    "icon": "MG-43.webp",
+    "icon": "MG-43.png",
     "keys": ["DOWN", "LEFT", "DOWN", "UP", "RIGHT"]
   },
   {
     "name": "APW-1 Anti-Materiel Rifle",
-    "icon": "APW-1.webp",
+    "icon": "APW-1.png",
     "keys": ["DOWN", "LEFT", "RIGHT", "UP", "DOWN"]
   },
   {
     "name": "M-105 Stalwart",
-    "icon": "M-105.webp",
+    "icon": "M-105.png",
     "keys": ["DOWN", "LEFT", "DOWN", "UP", "UP", "LEFT"]
   },
   {
     "name": "EAT-17 Expendable Anti-tank",
-    "icon": "EAT-17.webp",
+    "icon": "EAT-17.png",
     "keys": ["DOWN", "DOWN", "LEFT", "UP", "RIGHT"]
   },
   {
     "name": "GR-8 Recoilless Rifle",
-    "icon": "GR-8.webp",
+    "icon": "GR-8.png",
     "keys": ["DOWN", "LEFT", "RIGHT", "RIGHT", "LEFT"]
   },
   {
     "name": "FLAM-40 Flamethrower",
-    "icon": "FLAM-40.webp",
+    "icon": "FLAM-40.png",
     "keys": ["DOWN", "LEFT", "UP", "DOWN", "UP"]
   },
   {
     "name": "AC-8 Autocannon",
-    "icon": "AC-8.webp",
+    "icon": "AC-8.png",
     "keys": ["DOWN", "LEFT", "DOWN", "UP", "UP", "RIGHT"]
   },
   {
     "name": "RS-422 Railgun",
-    "icon": "RS-422.webp",
+    "icon": "RS-422.png",
     "keys": ["DOWN", "RIGHT", "DOWN", "UP", "LEFT", "RIGHT"]
   },
   {
     "name": "FAF-14 SPEAR Launcher",
-    "icon": "FAF-14.webp",
+    "icon": "FAF-14.png",
     "keys": ["DOWN", "DOWN", "UP", "DOWN", "DOWN"]
   },
   {
     "name": "GL-21 Grenade Launcher",
-    "icon": "GL-21.webp",
+    "icon": "GL-21.png",
     "keys": ["DOWN", "LEFT", "UP", "LEFT", "DOWN"]
   },
   {
     "name": "LAS-98 Laser Cannon",
-    "icon": "LAS-98.webp",
+    "icon": "LAS-98.png",
     "keys": ["DOWN", "LEFT", "DOWN", "UP", "LEFT"]
   },
   {
     "name": "ARC-3 Arc Thrower",
-    "icon": "ARC-3.webp",
+    "icon": "ARC-3.png",
     "keys": ["DOWN", "RIGHT", "DOWN", "UP", "LEFT", "LEFT"]
   },
   {
     "name": "Reinforce",
-    "icon": "reinforce.webp",
+    "icon": "reinforce.png",
     "keys": ["UP", "DOWN", "RIGHT", "LEFT", "UP"]
   },
   {
     "name": "SOS Beacon",
-    "icon": "SOSicon.webp",
+    "icon": "SOSicon.png",
     "keys": ["UP", "DOWN", "RIGHT", "UP"]
   },
   {
     "name": "Resupply",
-    "icon": "resupply.webp",
+    "icon": "resupply.png",
     "keys": ["DOWN", "DOWN", "UP", "RIGHT"]
   },
   {
     "name": "Hellbomb",
-    "icon": "hellbomb.webp",
+    "icon": "hellbomb.png",
     "keys": ["DOWN", "UP", "LEFT", "DOWN", "UP", "RIGHT", "DOWN", "UP"]
   },
   {
     "name": "SSSD Delivery",
-    "icon": "DeliverSSSD.webp",
+    "icon": "DeliverSSSD.png",
     "keys": ["DOWN", "DOWN", "DOWN", "UP", "UP"]
   },
   {
     "name": "Seismic Probe",
-    "icon": "Seismicprobe.webp",
+    "icon": "Seismicprobe.png",
     "keys": ["UP", "UP", "LEFT", "RIGHT", "DOWN", "DOWN"]
   },
   {
     "name": "Upload Data",
-    "icon": "DeliverSSSD.webp",
+    "icon": "DeliverSSSD.png",
     "keys": ["DOWN", "DOWN", "UP", "UP", "UP"]
   },
   {
     "name": "Eagle Rearm",
-    "icon": "HD2EagleRearm.webp",
+    "icon": "HD2EagleRearm.png",
     "keys": ["UP", "UP", "LEFT", "UP", "RIGHT"]
   },
   {
     "name": "E/MG-101 HMG Emplacement",
-    "icon": "HMGTurreticon.webp",
+    "icon": "HMGTurret.png",
     "keys": ["DOWN", "UP", "LEFT", "RIGHT", "RIGHT", "LEFT"]
   },
   {
     "name": "FX-12 Shield Generator Relay",
-    "icon": "Shieldrelay.webp",
+    "icon": "Shieldrelay.png",
     "keys": ["DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT"]
   },
   {
     "name": "A/ARC-3 Tesla Tower",
-    "icon": "Tesla.webp",
+    "icon": "Tesla.png",
     "keys": ["DOWN", "UP", "RIGHT", "UP", "LEFT", "RIGHT"]
   },
   {
     "name": "MD-6 Anti-Personnel Minefield",
-    "icon": "Minefield.webp",
+    "icon": "Minefield.png",
     "keys": ["DOWN", "LEFT", "UP", "RIGHT"]
   },
   {
     "name": "MD-I4 Incendiary Mines",
-    "icon": "Fireminefield.webp",
+    "icon": "Fireminefield.png",
     "keys": ["DOWN", "LEFT", "LEFT", "DOWN"]
   },
   {
     "name": "A/MG-43 Machine Gun Sentry",
-    "icon": "MGsentry.webp",
+    "icon": "MGsentry.png",
     "keys": ["DOWN", "UP", "RIGHT", "RIGHT", "UP"]
   },
   {
     "name": "A/G-16 Gatling Sentry",
-    "icon": "Gatlingsentry.webp",
+    "icon": "Gatlingsentry.png",
     "keys": ["DOWN", "UP", "RIGHT", "LEFT"]
   },
   {
     "name": "A/M-12 Mortar Sentry",
-    "icon": "Mortarsentry.webp",
+    "icon": "Mortarsentry.png",
     "keys": ["DOWN", "UP", "RIGHT", "RIGHT", "DOWN"]
   },
   {
     "name": "A/AC-8 Autocannon Sentry",
-    "icon": "Autocannoasentry.webp",
+    "icon": "Autocannoasentry.png",
     "keys": ["DOWN", "UP", "RIGHT", "UP", "LEFT", "UP"]
   },
   {
     "name": "A/MLS-4X Rocket Sentry",
-    "icon": "Missilesentry.webp",
+    "icon": "Missilesentry.png",
     "keys": ["DOWN", "UP", "RIGHT", "RIGHT", "LEFT"]
   },
   {
     "name": "A/M-23 EMS Mortar Sentry",
-    "icon": "EMSmortar.webp",
+    "icon": "EMSmortar.png",
     "keys": ["DOWN", "UP", "RIGHT", "DOWN", "RIGHT"]
   },
   {
     "name": "Orbital Gatling Barrage ",
-    "icon": "OrbitalGatling.webp",
+    "icon": "OrbitalGatling.png",
     "keys": ["RIGHT", "DOWN", "LEFT", "UP", "UP"]
   },
   {
     "name": "Orbital Airburst Strike ",
-    "icon": "OrbitalAirburst.webp",
+    "icon": "OrbitalAirburst.png",
     "keys": ["RIGHT", "RIGHT", "RIGHT"]
   },
   {
     "name": "Orbital 120MM HE Barrage",
-    "icon": "Orbital120.webp",
+    "icon": "Orbital120.png",
     "keys": ["RIGHT", "RIGHT", "DOWN", "LEFT", "RIGHT", "DOWN"]
   },
   {
     "name": "Orbital 380MM HE Barrage",
-    "icon": "Orbital380.webp",
+    "icon": "Orbital380.png",
     "keys": ["RIGHT", "DOWN", "UP", "UP", "LEFT", "DOWN", "DOWN"]
   },
   {
     "name": "Orbital Walking Barrage",
-    "icon": "OrbitalWalking.webp",
+    "icon": "OrbitalWalking.png",
     "keys": ["RIGHT", "DOWN", "RIGHT", "DOWN", "RIGHT", "DOWN"]
   },
   {
     "name": "Orbital Laser",
-    "icon": "OrbitalLaser.webp",
+    "icon": "OrbitalLaser.png",
     "keys": ["RIGHT", "DOWN", "UP", "RIGHT", "DOWN"]
   },
   {
     "name": "Orbital Railcannon Strike",
-    "icon": "OrbitalRailcannon.webp",
+    "icon": "OrbitalRailcannon.png",
     "keys": ["RIGHT", "UP", "DOWN", "DOWN", "RIGHT"]
   },
   {
     "name": "Orbital Precision Strike",
-    "icon": "OrbitalPrecision.webp",
+    "icon": "OrbitalPrecision.png",
     "keys": ["RIGHT", "RIGHT", "UP"]
   },
   {
     "name": "Orbital Gas Strike",
-    "icon": "OrbitalGas.webp",
+    "icon": "OrbitalGas.png",
     "keys": ["RIGHT", "RIGHT", "DOWN", "RIGHT"]
   },
   {
     "name": "Orbital EMS Strike",
-    "icon": "OrbitalEMS.webp",
+    "icon": "OrbitalEMS.png",
     "keys": ["RIGHT", "RIGHT", "LEFT", "DOWN"]
   },
   {
     "name": "Orbital Smoke Strike ",
-    "icon": "OrbitalSmoke.webp",
+    "icon": "OrbitalSmoke.png",
     "keys": ["RIGHT", "RIGHT", "DOWN", "UP"]
   },
   {
     "name": "Eagle Strafing Run",
-    "icon": "EagleStrafing.webp",
+    "icon": "EagleStrafing.png",
     "keys": ["UP", "RIGHT", "RIGHT"]
   },
   {
     "name": "Eagle Airstrike",
-    "icon": "EagleAirstrike.webp",
+    "icon": "EagleAirstrike.png",
     "keys": ["UP", "RIGHT", "DOWN", "RIGHT"]
   },
   {
     "name": "Eagle Cluster Bomb",
-    "icon": "EagleClusterbomb.webp",
+    "icon": "EagleClusterbomb.png",
     "keys": ["UP", "RIGHT", "DOWN", "DOWN", "RIGHT"]
   },
   {
     "name": "Eagle Napalm Airstrike",
-    "icon": "EagleNapalm.webp",
+    "icon": "EagleNapalm.png",
     "keys": ["UP", "RIGHT", "DOWN", "UP"]
   },
   {
     "name": "Eagle Smoke Strike",
-    "icon": "EagleSmoke.webp",
+    "icon": "EagleSmoke.png",
     "keys": ["UP", "RIGHT", "UP", "DOWN"]
   },
   {
     "name": "Eagle 110MM Rocket Pods",
-    "icon": "EagleRocketpod.webp",
+    "icon": "EagleRocketpod.png",
     "keys": ["UP", "RIGHT", "UP", "LEFT"]
   },
   {
     "name": "Eagle 500kg Bomb",
-    "icon": "Eagle500.webp",
+    "icon": "Eagle500.png",
     "keys": ["UP", "RIGHT", "DOWN", "DOWN", "DOWN"]
   },
   {
     "name": "EXO-45 Patriot Exosuit",
-    "icon": "EXO-45_Patriot_Exosuit.webp",
+    "icon": "EXO-45_Patriot_Exosuit.png",
     "keys": ["LEFT", "DOWN", "RIGHT", "UP", "LEFT", "DOWN", "DOWN"]
+  },
+  {
+    "name": "Super Earth Flag",
+    "icon": "super_earth_flag.png",
+    "keys": ["DOWN", "UP", "DOWN", "UP"]
+  },
+  {
+    "name": "SEAF Artillery",
+    "icon": "SEAF_Artillery.png",
+    "keys": ["RIGHT", "UP", "UP", "DOWN"]
+  },
+  {
+    "name": "Prospecting Drill",
+    "icon": "prospect_drill.png",
+    "keys": ["DOWN", "DOWN", "LEFT", "RIGHT", "DOWN", "DOWN"]
   }
 ]

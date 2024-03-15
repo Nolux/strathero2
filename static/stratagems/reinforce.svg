@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#C9B269;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#C9B269;}
+</style>
+<rect width="512" height="512"/>
+<path class="st0" d="M33.7,259.7v-184c0-22.1,17.9-40,40-40H256"/>
+<path class="st0" d="M479.2,258.9v184c0,22.1-17.9,40-40,40H256.9"/>
+<g>
+	<path id="Shape_1_copy" class="st1" d="M324.5,396.1h-193l-24.9-28V337h52.9l31.1,28h74.7l31.1-28h52.9v31.1L324.5,396.1z"/>
+	<path class="st1" d="M228,352.5l-71.6-52.9v-62.3h12.5c0-58.2,59.2-59.2,59.2-59.2s59.2,0.9,59.2,59.2h12.5v62.3L228,352.5z
+		 M271.6,237.3h-87.2v43.6h21.8l9.3-12.5h24.9l9.3,12.5h21.8V237.3z"/>
+	<path id="Rectangle_1_copy" class="st1" d="M421,190.6h-56v52.9h-15.6v-52.9h-52.9V175h52.9v-56H365v56h56V190.6z"/>
+	<path class="st2" d="M72.3,439.7v-62.3l62.3,62.3H72.3z M439.7,439.7v-62.3l-62.3,62.3H439.7z M439.7,72.3v62.3l-62.3-62.3H439.7z
+		 M72.3,72.3v62.3l62.3-62.3H72.3z"/>
+</g>
+</svg>
