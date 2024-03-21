@@ -39,12 +39,3 @@
     >Click here to Restart new round or press a key</button
   >
 </div>
-
-<style>
-  .textyellow {
-    color: #eaeea2;
-  }
-  .bgyellow {
-    background-color: #eaeea2;
-  }
-</style>

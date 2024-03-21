@@ -7,9 +7,3 @@
 
   <div class="text-3xl textyellow">{round + 1}</div>
 </div>
-
-<style>
-  .textyellow {
-    color: #eaeea2;
-  }
-</style>

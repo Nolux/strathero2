@@ -38,9 +38,3 @@
     }}>Click here to start new round or press a key!</button
   >
 </div>
-
-<style>
-  .textyellow {
-    color: #eaeea2;
-  }
-</style>

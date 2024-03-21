@@ -8,9 +8,3 @@
   </div>
   <div>SCORE</div>
 </div>
-
-<style>
-  .textyellow {
-    color: #eaeea2;
-  }
-</style>

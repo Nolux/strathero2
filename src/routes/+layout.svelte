@@ -4,6 +4,7 @@
   import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 
   import Byline from "$lib/components/Byline.svelte";
+  import Border from "$lib/components/Border.svelte";
 
   injectSpeedInsights();
   inject();
@@ -13,8 +14,15 @@
   class="absolute h-dvh w-dvw crt bg-clip-border z-10 hidden md:block opacity-50"
 ></div>
 <div class="h-dvh w-dvw bg-black monda flex flex-col justify-center gap-4">
+  <div class="md:block hidden">
+    <Border />
+  </div>
   <slot />
   <Byline />
+
+  <div class="md:block hidden">
+    <Border />
+  </div>
 </div>
 
 <style>
