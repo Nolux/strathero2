@@ -293,5 +293,15 @@
     "name": "Prospecting Drill",
     "icon": "prospect_drill.png",
     "keys": ["DOWN", "DOWN", "LEFT", "RIGHT", "DOWN", "DOWN"]
+  },
+  {
+    "name": "LAS-99 Quasar Canon",
+    "icon": "LAS-99.png",
+    "keys": ["DOWN", "DOWN", "UP", "LEFT", "RIGHT"]
+  },
+  {
+    "name": "MG-206 Heavy Machine Gun",
+    "icon": "MG-206.png",
+    "keys": ["DOWN", "LEFT", "UP", "DOWN", "DOWN"]
   }
 ]
